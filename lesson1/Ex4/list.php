@@ -6,6 +6,5 @@
 	    echo $row['id']; echo '_';
 		echo $row['name']; echo '_';
 		echo $row['phone']; echo ';_';
-	}
-	
+	}	
 ?>
