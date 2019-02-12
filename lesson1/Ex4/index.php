@@ -4,9 +4,10 @@
     <?php
 		$title = 'Frontend-разработчик и веб-верстальщик | Дмитрий Алексеев';
 		$h1 = 'Дмитрий <br>Алексеев';
+		$year = date('o');
 	?>
 	<meta charset="UTF-8">
-	<title><?php echo $title;?></title>
+	<title><?=$title;?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
@@ -54,7 +55,7 @@
 		</div>
 		
 		<div class="introdaction">
-			<h1><?php echo $h1;?></h1>
+			<h1><?=$h1;?></h1>
 			<span id="description">Frontend-разработчик и веб-верстальщик</span>
 			<button class="more-info">Узнать больше</button>
 		</div>
@@ -130,7 +131,7 @@
 		</div>
 	</div>
 	<footer>
-		<p>&copy; Дмитрий Алексеев, 2016 &mdash; <?php echo date('o');?></p>
+		<p>&copy; Дмитрий Алексеев, 2016 &mdash; <?=$year;?></p>
 	</footer>
 </body>
 </html>
