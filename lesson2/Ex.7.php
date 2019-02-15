@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $date_time_array = getdate( time() );
 $h=$date_time_array['hours'];
 $m=$date_time_array['minutes'];
@@ -27,4 +27,3 @@ function clock ($h, $m){
 	}
 	echo $h1, $m1;
 }
-?>

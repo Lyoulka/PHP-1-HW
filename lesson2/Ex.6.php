@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $a=mt_rand(-10,10);
 $b=mt_rand(-10,10);
 echo 'Значение переменной а = '.$a.',<br>Значение переменной b = '.$b.'.<br>';
@@ -17,4 +17,3 @@ echo $a.' в степени '.$b.' = '.power($a,$b);
 		echo $e.'<br>';
 		return $val * power($val, $pow-1);
 	}
-?>

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $a = mt_rand(-10,10);
 $b = mt_rand(-10,10);
 echo 'Значение переменной а = '.$a.',<br>Значение переменной b = '.$b.'.<br>';
@@ -8,8 +8,12 @@ echo $temp;
 	$sum = $arg1+$arg2;
 	$raz = $arg1-$arg2;
 	$proiz = $arg1*$arg2;
-	$del = $arg1/$arg2;
+	if (arg2 !==0) {
+		$del = $arg1/$arg2;
+	}
+	else{
+		echo 'На ноль делить нельзя';
+	}
 	$result = 'Сумма = '.$sum.',<br>Разность = '.$raz.',<br>Произведение = '.$proiz.',<br>Частное = '.$del.'.';
 	return $result;
 	}
-?>

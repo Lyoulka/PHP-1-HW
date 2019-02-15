@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $a = mt_rand(-10,10);
 $b = mt_rand(-10,10);
 $numb = mt_rand(1,4);
@@ -19,8 +19,15 @@ mathOperation($a, $b, $numb);
 				echo 'Произведение = '.($arg1*$arg2);
 				break;
 			case 4:
-				echo 'Частное = '.($arg1/$arg2);	
+				if (arg2 !==0) {
+					echo 'Частное = '.($arg1/$arg2);
 					break;
-		}
+				}
+				else{
+					echo 'На ноль делить нельзя';
+					break;
+				}
+					
+				
+			}
 	}
-?>

@@ -37,4 +37,3 @@ switch ($a){
 		break;
 		
 }
-?>
