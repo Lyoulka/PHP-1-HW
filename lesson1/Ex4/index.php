@@ -25,9 +25,18 @@
 					<i class="fa fa-bars gamburger3" datas="off"></i>
 						<div class="gamburger4">
 							<ul class="gamburger5">
-								<li><a href="">Услуги</a></li>
-								<li><a href="">Портфолио</a></li>
-								<li><a href="">Стоимость</a></li>
+								<?php $menu=['Услуги' => ['Верстка', 'Дизайн', 'Сайт &laquo;под ключ&raquo;'], 
+									'Портфолио' => ['Все работы','Верстка', 'Дизайн', 'Сайты &laquo;под ключ&raquo;', 'Разное'],
+									'Стоимость'=> ['Верстка', 'Дизайн', 'Сайт &laquo;под ключ&raquo;']];
+									foreach ($menu as $key => $value) {
+									echo "<li><a href=''>$key</a><ul class='inline_list'>";
+										foreach ($value as $key => $value) {
+											echo "<li ><a  href=''>$value</a></li>";
+										}
+									echo '</ul></li>';	
+									}
+									
+									unset($value);?>
 							</ul>
 						</div>
 					</div>

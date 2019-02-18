@@ -115,6 +115,7 @@ body {
     color: #fc557c;
     border-bottom: 1px dashed #fc557c;
   }
+
   h3 {
     padding-top: 15px;
     color: #262626;
@@ -735,7 +736,7 @@ body {
   .gamburger4 li {
     display: inline-block;
     /* Отображать как строчный элемент */
-    padding: 20px 0px 10px 17px;
+    padding: 20px 0px 10px 0px;
   }
   .gamburger4 li a:hover {
     color: #fc557c;
@@ -750,6 +751,45 @@ body {
     flex-direction: row;
     justify-content: flex-start;
   }
+ .gamburger5 ul{
+	
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+   .gamburger5 li{
+	margin-right: 0px;
+  }
+    .gamburger5  ul {
+	display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+	padding: 0px;
+	margin: 0px;
+	background: #8993ad;
+	width: 300px;
+  }
+   .gamburger5  li:hover ul {
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+	padding: 0px;
+	margin: 0px;
+	background: #8993ad;
+	width: 250px;
+	position:absolute;
+  }
+  .inline_list li a {
+	  	color: #FFFFFF;
+		text-align: center;
+		margin-left: 20px;
+		width: 200px;
+		height: 100%;
+		padding: 20px 20px;
+  }
+   .inline_list li{
+	   padding: 0px;
+   }
+
   h3 {
     padding-top: 98px;
     padding-bottom: 94px;
@@ -969,5 +1009,6 @@ body {
   #checkbox lable {
 	  margin-top: 8px;
   }
+
 }
 
