@@ -115,6 +115,40 @@ body {
     color: #fc557c;
     border-bottom: 1px dashed #fc557c;
   }
+  
+   .gamburger5 li{
+	margin-right: 0px;
+  }
+    .gamburger5  ul {
+	display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+	padding: 0px;
+	margin: 0px;
+	background: #8993ad;
+	width: 300px;
+  }
+   .gamburger5  li:hover ul {
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+	padding: 0px;
+	margin: 0px;
+	background: #8993ad;
+	width: 250px;
+	
+  }
+  .inline_list li a {
+	  	color: #FFFFFF;
+		text-align: center;
+		margin-left: 20px;
+		width: 200px;
+		height: 100%;
+		padding: 20px 20px;
+  }
+   .inline_list li{
+	   padding: 0px;
+   }
 
   h3 {
     padding-top: 15px;
@@ -402,6 +436,40 @@ body {
     color: #fc557c;
     border-bottom: 1px dashed #fc557c;
   }
+  
+   .gamburger5 li{
+	margin-right: 0px;
+  }
+    .gamburger5  ul {
+	display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+	padding: 0px;
+	margin: 0px;
+	background: #8993ad;
+	
+  }
+   .gamburger5  li:hover ul {
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+	padding: 0px;
+	margin: 0px;
+	background: #8993ad;
+	width: 400px;
+	
+  }
+  .inline_list li a {
+	  	color: #FFFFFF;
+		text-align: center;
+		margin-left: 20px;
+		width: 200px;
+		height: 100%;
+		padding: 20px 20px;
+  }
+   .inline_list li{
+	   padding: 0px;
+   }
   h3 {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -751,11 +819,7 @@ body {
     flex-direction: row;
     justify-content: flex-start;
   }
- .gamburger5 ul{
-	
-    flex-direction: column;
-    justify-content: flex-start;
-  }
+
    .gamburger5 li{
 	margin-right: 0px;
   }
