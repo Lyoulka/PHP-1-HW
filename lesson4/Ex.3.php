@@ -10,7 +10,7 @@
 	
 	<script>$('#myModalsearch').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')})</script>
-    <title>Hello, world!</title>
+    <title>Gallery</title>
   </head>
   <body>
 	<?php
