@@ -1,3 +1,22 @@
+<?php
+		function getImages ($source){
+			if (!file_exists($source)){
+				return false;
+			}
+		$files = scandir($source);
+		$images = [];
+			foreach ($files as $file){
+				$type = mime_content_type($source.'/'.$file);
+				if (strpos ($type, 'image') === 0){
+					$images[] = $file;
+				};
+				
+			}
+			return $images;
+		}
+		$source = 'img';
+		$images = getImages ($source);
+	?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,32 +26,28 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-	
 	<script>$('#myModalsearch').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')})</script>
-    <title>Gallery</title>
+		$('#myInput').trigger('focus')})</script>
+    <title>Hello, world!</title>
+
   </head>
   <body>
-	<?php
-	$dir = 'img/';
-	$images = scandir($dir);
-	$number = count($images);
-		for ($i = 0; $i < $number; $i++) {
-			if ($images[$i] != '.' && $images[$i] != '..') {
-				$id = $i-3;
-				echo '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalsearch-'.$id.'" style="background: #ffffff; border: none;"><img src='.$dir.$images[$i].' style="width: 200px;"></button>
-				<div class="modal fade" id="myModalsearch-'.$id.'" tabindex="-1" role="dialog">
+
+	<?php foreach ($images as $image):
+	$path = $source.'/'.$image;
+	$i++;
+	?>
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalsearch-<? echo $i?>" style="background: #ffffff; border: none;"><img src='<? echo $path?>' style="width: 200px;"></button>
+				<div class="modal fade" id="myModalsearch-<? echo $i?>" tabindex="-1" role="dialog">
 					<div class="modal-dialog" role="document">
 						<div class="modal-content" style="background: none; border: none; width: 900px;">
 							<div class="modal-body">
-								<img src='.$dir.$images[$i].' style="width: 100%;">
+								<img src='<?echo $path?>' style="width: 100%;">
 							</div>
 						</div>
 					</div>
-				</div>';
-			}
-		}
-	?>
+				</div>
+	<?php endforeach;?>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
