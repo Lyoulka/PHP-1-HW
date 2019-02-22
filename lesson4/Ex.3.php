@@ -37,12 +37,12 @@
 	$path = $source.'/'.$image;
 	$i++;
 	?>
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalsearch-<? echo $i?>" style="background: #ffffff; border: none;"><img src='<? echo $path?>' style="width: 200px;"></button>
-				<div class="modal fade" id="myModalsearch-<? echo $i?>" tabindex="-1" role="dialog">
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalsearch-<?= $i?>" style="background: #ffffff; border: none;"><img src='<?= $path?>' style="width: 200px;"></button>
+				<div class="modal fade" id="myModalsearch-<?= $i?>" tabindex="-1" role="dialog">
 					<div class="modal-dialog" role="document">
 						<div class="modal-content" style="background: none; border: none; width: 900px;">
 							<div class="modal-body">
-								<img src='<?echo $path?>' style="width: 100%;">
+								<img src='<?= $path?>' style="width: 100%;">
 							</div>
 						</div>
 					</div>
