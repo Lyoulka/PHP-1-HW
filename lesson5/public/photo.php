@@ -32,7 +32,7 @@
         counters($conDB, $id, "view");
         renderGallery($conDB, $id);
     }
-    /*Галерея без формы загрузки*/
+    /*Галерея*/
     echo '<hr>';
     renderGallery($conDB, null);
     /*Закрытие соединения с БД*/
