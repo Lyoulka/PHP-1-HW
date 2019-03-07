@@ -26,6 +26,7 @@ function renderGoods($conDB)
                             <div class="modal-body">
                                 <img src='. $path . $good['goods_img'].'>
                                 <h5 class="modal-title">'.$good['goods_name'].'</h5>
+                                <p>Назначение: '.$good['goods_type'].'</p>
                                 <p>'.$good['goods_description'].'</p>
                                 <p class="card-text"> <b>Цена: '.$good['goods_price'].' руб.</b></p>
                                 <button type="button" class="btn btn-primary">В корзину</button>
