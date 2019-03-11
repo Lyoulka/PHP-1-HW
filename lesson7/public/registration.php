@@ -10,7 +10,7 @@
 
     if ($success) : ?>
      <div class="message">Регистрация прошла успешно</div>
-    <?php $e = confirmPassword($new_password, $password); var_dump($e);  endif ?>
+    <?php endif ?>
 <main>
         <div class="login-block">
             <img src="img/1.png" alt="Scanfcode">
@@ -32,7 +32,7 @@
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-lock ti-unlock"></i></span>
-                        <input type="password" name="pass" class="form-control" placeholder="Ваш пароль" required>
+                        <input type="password" name="password" class="form-control" placeholder="Ваш пароль" required>
                     </div>
                 </div>
                 <button class="btn btn-primary btn-block" type="submit">ЗАРЕГИСТРИРОВАТЬСЯ</button>
@@ -42,7 +42,6 @@
         <p class="text-center">Уже есть аккаунт? <a class="txt-brand" href="login.php"><font color=#29aafe>Авторизуйтесь</font></a></p>
     </div>
  </main>
-
 <? 
     include COMPONENT . "footer.php";
 ?>

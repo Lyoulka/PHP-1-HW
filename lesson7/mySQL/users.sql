@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Мар 07 2019 г., 16:09
+-- Время создания: Мар 11 2019 г., 17:16
 -- Версия сервера: 5.6.41
 -- Версия PHP: 5.5.38
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `user_name` varchar(50) NOT NULL,
   `user_login` varchar(50) NOT NULL,
   `user_hash_password` text NOT NULL
@@ -39,10 +39,14 @@ CREATE TABLE `users` (
 -- Дамп данных таблицы `users`
 --
 
-INSERT INTO `users` (`id`, `user_name`, `user_login`, `user_hash_password`) VALUES
+INSERT INTO `users` (`user_id`, `user_name`, `user_login`, `user_hash_password`) VALUES
 (1, 'Илья', 'wind', '$2y$10$W7ug5esA46YZ/xHnL6Tecu9TM/i2azas4IBgWtrqkCigmpkALZl.C'),
-(2, 'Александр', 'Alex', '$2a$08$ZDk5ZWJjMzcyYzJiODUyYOdjaxh9vtJrFcaaOx7c1k1kdSko26WI.'),
-(3, 'Маша', 'Masha', '$2a$08$ZjExNTIyOTQ5OTJlY2U4O.YYj5xB8EQ9RI7akq1vDUBhNvImsTBTC');
+(2, 'Маша', 'Masha', '$2a$08$Y2U5NGYzODA4MjczNDBiO.VtPnQJ2q6paK10bo2k8o2zod6n4y3Oi'),
+(3, 'Александр', 'Alex', '$2a$08$YjM4OGFjYTJiY2NhNDc1ZeKfZ/bemsnmk0tphO6BmCXJYbzh81opS'),
+(4, 'Tan', 'tan', '$2a$08$OGJhN2ZlYmZjNzc5MTc0N.YKDX1DsfvZh0DsatXVth8Kst63YNZkS'),
+(5, 'Оля', 'olya', '$2a$08$Y2ZjMjc1MGZhMzJhNGNhM.BreuBUplZGkqHqPG6W1KZCwBtieXsTO'),
+(6, 'Аня', 'anna', '$2a$08$YjRkZGYzNjM1N2FjNzMwM.qE2URQ4vIm55CuyWEe7MtKA7FcUwOz6'),
+(7, 'Katya', 'Kate', '$2a$08$MWM4YzI3MjMyNzgzZDE0YuPozmsvM3sM9Plq3MHqLOiBcshF/IQVq');
 
 --
 -- Индексы сохранённых таблиц
@@ -52,7 +56,7 @@ INSERT INTO `users` (`id`, `user_name`, `user_login`, `user_hash_password`) VALU
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`user_id`),
   ADD UNIQUE KEY `user_login` (`user_login`);
 
 --
@@ -63,7 +67,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
